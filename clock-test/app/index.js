@@ -1,6 +1,28 @@
 import clock from "clock";
 import document from "document";
 import { preferences } from "user-settings";
+import { HeartRateSensor } from "heart-rate";
+import { today } from "user-activity";
+
+// Get a handle on the <text> elements
+const myLabel = document.getElementById("myLabel");
+const myLabel2 = document.getElementById("myLabel2");
+const steps = document.getElementById("steps");
+const hello = document.getElementById("hello");
+
+if (today.adjusted.steps) {
+  steps.addEventListener("reading", () => {
+    steps.text = `Steps today: ${today.adjusted.steps}`;
+  });
+}
+
+if (HeartRateSensor) {
+  const hrm = new HeartRateSensor();
+  hrm.addEventListener("reading", () => {
+    myLabel2.text = `Heartrate: ${hrm.heartRate}`;
+  });
+  hrm.start();
+}
 
 function zeroPad(i) {
   if (i < 10) {
@@ -12,11 +34,7 @@ function zeroPad(i) {
 // Update the clock every minute
 clock.granularity = "minutes";
 
-// Get a handle on the <text> element
-const myLabel = document.getElementById("myLabel");
-const myLabel2 = document.getElementById("myLabel2");
-
-myLabel2.text = "Hello World!";
+hello.text = "Hello World!";
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
