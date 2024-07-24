@@ -6,8 +6,10 @@ import { today } from "user-activity";
 import { battery } from "power";
 
 // Get a handle on the <text> elements
-const clockHour = document.getElementById("clockHour");
-const clockMinute = document.getElementById("clockMinute");
+const hour1 = document.getElementById("hour1");
+const hour2 = document.getElementById("hour2");
+const minute1 = document.getElementById("minute1");
+const minute2 = document.getElementById("minute2");
 const heartrate = document.getElementById("heartrate");
 const steps = document.getElementById("steps");
 const date = document.getElementById("date");
@@ -77,7 +79,10 @@ clock.ontick = (evt) => {
     hours = zeroPad(hours);
   }
   let mins = zeroPad(today.getMinutes());
-  clockHour.text = `${hours}`;
-  clockMinute.text = `${mins}`;
+  hour1.href = `${hours.toString()[0]}.png`;
+  hour2.href = `${hours.toString()[1]}.png`;
+  minute1.href = `${mins.toString()[0]}.png`;
+  minute2.href = `${mins.toString()[1]}.png`;
+
   date.text = `${getDayStr(today.getDay())} ${today.getDate()}`;
 };

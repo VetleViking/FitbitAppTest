@@ -2,25 +2,34 @@
   viewport-fill: #1d1bb5;
 }
 
-#clockHour {
-  font-size: 80;
-  font-family: System-Bold;
-  text-length: 32;
-  text-anchor: end;
-  x: 95%;
+/* #hour1 {
+  x: 60%;
   y: 30%;
+  height: 50;
+  width: auto;
   fill: #44c841;
 }
 
-#clockMinute {
-  font-size: 80;
-  font-family: System-Bold;
-  text-length: 32;
-  text-anchor: end;
-  x: 95%;
-  y: 55%;
+#hour2 {
+  x: 80%;
+  y: 30%;
+  height: 50;
   fill: #44c841;
 }
+
+#minute1 {
+  x: 60%;
+  y: 55%;
+  height: 50;
+  fill: #44c841;
+}
+
+#minute2 {
+  x: 80%;
+  y: 55%;
+  height: 50;
+  fill: #44c841;
+} */
 
 #heartrate {
   font-size: 20;
