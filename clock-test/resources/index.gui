@@ -1,6 +1,8 @@
 <svg class="background">
   <text id="myLabel" />
-  <text id="myLabel2" />
+  <text id="date" />
+  <image href="Background1.png" id="image1" />
+  <image href="black-back-0.png" id="image" />
+  <text id="heartrate" />
   <text id="steps" />
-  <text id="hello" />
 </svg>

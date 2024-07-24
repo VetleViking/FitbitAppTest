@@ -6,20 +6,35 @@ import { today } from "user-activity";
 
 // Get a handle on the <text> elements
 const myLabel = document.getElementById("myLabel");
-const myLabel2 = document.getElementById("myLabel2");
+const heartrate = document.getElementById("heartrate");
 const steps = document.getElementById("steps");
-const hello = document.getElementById("hello");
+const date = document.getElementById("date");
+const image = document.getElementById("image");
+
+let at = 0;
+
+setInterval(() => {
+  at = at + 1;
+
+  if (at > 18) {
+    at = 0;
+  }
+
+  image.href = `black-back-${at}.png`;
+}, 100);
 
 if (today.adjusted.steps) {
-  steps.addEventListener("reading", () => {
+  setInterval(() => {
     steps.text = `Steps today: ${today.adjusted.steps}`;
-  });
+  }, 10000);
+
+  steps.text = `Steps today: ${today.adjusted.steps}`;
 }
 
 if (HeartRateSensor) {
   const hrm = new HeartRateSensor();
   hrm.addEventListener("reading", () => {
-    myLabel2.text = `Heartrate: ${hrm.heartRate}`;
+    heartrate.text = `Heartrate: ${hrm.heartRate}`;
   });
   hrm.start();
 }
@@ -34,8 +49,6 @@ function zeroPad(i) {
 // Update the clock every minute
 clock.granularity = "minutes";
 
-hello.text = "Hello World!";
-
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
   let today = evt.date;
@@ -49,4 +62,5 @@ clock.ontick = (evt) => {
   }
   let mins = zeroPad(today.getMinutes());
   myLabel.text = `${hours}:${mins}`;
+  date.text = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
 };
