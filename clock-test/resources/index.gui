@@ -1,8 +1,13 @@
 <svg class="background">
-  <text id="myLabel" />
-  <text id="date" />
-  <image href="Background1.png" id="image1" />
+  <image href="Background3.png" id="image1" />
   <image href="black-back-0.png" id="image" />
+  <image href="layer 1.png" id="heartrateicon" />
   <text id="heartrate" />
+  <image href="stepsicon.png" id="stepsicon" />
   <text id="steps" />
+  <text id="clockHour" />
+  <text id="clockMinute" />
+  <text id="date" />
+  <image href="battery.png" id="batteryicon" />
+  <text id="battery" />
 </svg>

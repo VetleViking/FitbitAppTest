@@ -3,13 +3,16 @@ import document from "document";
 import { preferences } from "user-settings";
 import { HeartRateSensor } from "heart-rate";
 import { today } from "user-activity";
+import { battery } from "power";
 
 // Get a handle on the <text> elements
-const myLabel = document.getElementById("myLabel");
+const clockHour = document.getElementById("clockHour");
+const clockMinute = document.getElementById("clockMinute");
 const heartrate = document.getElementById("heartrate");
 const steps = document.getElementById("steps");
 const date = document.getElementById("date");
 const image = document.getElementById("image");
+const batteryElem = document.getElementById("battery");
 
 let at = 0;
 
@@ -23,18 +26,26 @@ setInterval(() => {
   image.href = `black-back-${at}.png`;
 }, 100);
 
-if (today.adjusted.steps) {
+if (battery) {
   setInterval(() => {
-    steps.text = `Steps today: ${today.adjusted.steps}`;
+    batteryElem.text = `${battery.chargeLevel}%`;
   }, 10000);
 
-  steps.text = `Steps today: ${today.adjusted.steps}`;
+  batteryElem.text = `${battery.chargeLevel}%`;
+}
+
+if (today.adjusted.steps) {
+  setInterval(() => {
+    steps.text = `${today.adjusted.steps}`;
+  }, 10000);
+
+  steps.text = `${today.adjusted.steps}`;
 }
 
 if (HeartRateSensor) {
   const hrm = new HeartRateSensor();
   hrm.addEventListener("reading", () => {
-    heartrate.text = `Heartrate: ${hrm.heartRate}`;
+    heartrate.text = `${hrm.heartRate}`;
   });
   hrm.start();
 }
@@ -45,6 +56,11 @@ function zeroPad(i) {
   }
   return i;
 };
+
+function getDayStr(index) {
+  let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  return days[index];
+}
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -61,6 +77,7 @@ clock.ontick = (evt) => {
     hours = zeroPad(hours);
   }
   let mins = zeroPad(today.getMinutes());
-  myLabel.text = `${hours}:${mins}`;
-  date.text = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+  clockHour.text = `${hours}`;
+  clockMinute.text = `${mins}`;
+  date.text = `${getDayStr(today.getDay())} ${today.getDate()}`;
 };

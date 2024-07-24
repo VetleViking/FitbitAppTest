@@ -2,44 +2,84 @@
   viewport-fill: #1d1bb5;
 }
 
-#myLabel {
+#clockHour {
   font-size: 80;
   font-family: System-Bold;
   text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 50%+40;
-  fill: white;
+  text-anchor: end;
+  x: 95%;
+  y: 30%;
+  fill: #44c841;
+}
+
+#clockMinute {
+  font-size: 80;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: end;
+  x: 95%;
+  y: 55%;
+  fill: #44c841;
 }
 
 #heartrate {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  text-anchor: middle;
-  x: 20%;
-  y: 45%;
-  fill: white;
+  x: 19%;
+  y: 52%;
+  fill: #44c841;
+}
+
+#heartrateicon {
+  x: 19%-23;
+  y: 52%-15;
+  height: 17;
+  width: 20;
+  z-index: 1;
 }
 
 #steps {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  text-anchor: middle;
-  x: 20%;
-  y: 75%;
-  fill: white;
+  x: 19%;
+  y: 82%;
+  fill: #44c841;
+}
+
+#stepsicon {
+  x: 19%-23;
+  y: 82%-15;
+  height: 17;
+  width: 17;
+  z-index: 1;
+}
+
+#battery {
+  font-size: 20;
+  text-length: 32;
+  font-family: System-Bold;
+  x: 68%;
+  y: 82%;
+  fill: #44c841;
+}
+
+#batteryicon {
+  x: 68%-20;
+  y: 82%-15;
+  height: 17;
+  width: 13;
+  z-index: 1;
 }
 
 #date {
-  font-size: 30;
+  font-size: 20;
   font-family: System-Bold;
   text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 50%-40;
-  fill: white;
+  x: 3%;
+  y: 97%;
+  fill: #44c841;
 }
 
 #image {
@@ -57,3 +97,4 @@
   width: 100%;
   z-index: -2;
 }
+
