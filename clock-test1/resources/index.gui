@@ -1,3 +1,4 @@
 <svg class="background">
-  <text id="hello" />
+  <text id="hours" />
+  <text id="minutes" />
 </svg>
