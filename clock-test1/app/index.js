@@ -5,6 +5,13 @@ import { preferences } from "user-settings";
 const hourselem = document.getElementById("hours")
 const minuteselem = document.getElementById("minutes");
 
+function zeroPad(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  };
+
 clock.granularity = "minutes";
 
 clock.ontick = (evt) => {

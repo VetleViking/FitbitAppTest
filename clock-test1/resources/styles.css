@@ -1,23 +1,23 @@
 .background {
-  viewport-fill: #1d1bb5;
+  viewport-fill: black;
 }
 
 #hours {
-  font-size: 50;
+  font-size: 40;
   font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
   x: 50%;
-  y: 30%;
+  y: 40%;
   fill: white;
 }
 
 #minutes {
-  font-size: 50;
+  font-size: 40;
   font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
   x: 50%;
-  y: 55%;
+  y: 70%;
   fill: white;
 }
