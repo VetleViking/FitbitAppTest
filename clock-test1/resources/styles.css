@@ -2,22 +2,23 @@
   viewport-fill: black;
 }
 
-#hours {
-  font-size: 40;
-  font-family: System-Bold;
+#bash1 {
+  font-size: 20;
   text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 40%;
-  fill: white;
+  font-family: System-Bold;
+  color: white;
 }
 
-#minutes {
-  font-size: 40;
-  font-family: System-Bold;
+#bash2 {
+  font-size: 20;
   text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 70%;
-  fill: white;
+  font-family: System-Bold;
+  color: white;
+}
+
+#bash3 {
+  font-size: 20;
+  text-length: 32;
+  font-family: System-Bold;
+  color: white;
 }

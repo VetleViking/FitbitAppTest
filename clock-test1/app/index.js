@@ -2,9 +2,9 @@ import document from "document";
 import clock from "clock";
 import { preferences } from "user-settings";
 
-const hourselem = document.getElementById("hours")
-const minuteselem = document.getElementById("minutes");
-const backgroundNums = document.getElementById("backgroundNums");
+const bash1 = document.getElementById("bash1");
+const bash2 = document.getElementById("bash2");
+const bash3 = document.getElementById("bash3");
 
 function zeroPad(i) {
     if (i < 10) {
@@ -13,23 +13,45 @@ function zeroPad(i) {
     return i;
 };
 
-function numToBin(num) {
-    let bin = num.toString(2);
-    if (bin.length < 6) {
-        let padding = 6 - bin.length;
-        for (let i = 0; i < padding; i++) {
-            bin = "0" + bin;
-        }
-    }
-    return bin;
-}
+let bashText1 = "time";
+let bashText3 = "cls";
+
+let writingAt = 0;
 
 clock.granularity = "minutes";
 
 clock.ontick = (evt) => {
     let today = evt.date;
-    let hours = numToBin(today.getHours());
-    let mins = numToBin(today.getMinutes());
-    hourselem.text = `${hours}`;
-    minuteselem.text = `${mins}`;
+    let hours = today.getHours();
+    let mins = zeroPad(today.getMinutes());
+
+    let bashText2 = `${hours}:${mins}`;
+
+    setTimeout(() => {
+        bash3.text = "> " + bashText3.substring(0, writingAt);
+
+        console.log(writingAt);
+
+        writingAt += 1;
+
+        if (writingAt > bashText3.length) {
+            console.log("done");
+            bash1.text = "";
+            bash2.text = "";
+            bash3.text = "";
+            writingAt = 0;
+            setTimeout(() => {
+                bash1.text = "> " + bashText1.substring(0, writingAt);
+        
+                writingAt += 1;
+        
+                if (writingAt > bashText1.length) {
+                    bash2.text = bashText2;
+                    writingAt = 0;
+                    return;
+                }
+            }, 300);
+            return;
+        }
+    }, 300);
 }
