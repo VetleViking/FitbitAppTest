@@ -6,19 +6,25 @@
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  color: white;
+  fill: #44c841;
+  x: 50;
+  y: 50;
 }
 
 #bash2 {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  color: white;
+  fill: #44c841;
+  x: 50;
+  y: 100;
 }
 
 #bash3 {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  color: white;
+  fill: #44c841;
+  x: 50;
+  y: 150;
 }

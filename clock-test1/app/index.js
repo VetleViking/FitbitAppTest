@@ -16,42 +16,42 @@ function zeroPad(i) {
 let bashText1 = "time";
 let bashText3 = "cls";
 
-let writingAt = 0;
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function writeText(text, element) {
+    let writingAt = 0;
+    while (writingAt <= text.length) {
+        element.text = "> " + text.substring(0, writingAt);
+        writingAt += 1;
+        await delay(300);
+    }
+}
+
+async function animation() {
+    if (bash1.text !== "" || bash2.text !== "" || bash3.text !== "") {
+        await writeText(bashText3, bash3);
+        await delay(300);
+        bash1.text = "";
+        bash2.text = "";
+        bash3.text = "";
+    }
+    await writeText(bashText1, bash1);
+
+
+    console.log("done anim");
+}
 
 clock.granularity = "minutes";
 
-clock.ontick = (evt) => {
+clock.ontick = async (evt) => {
     let today = evt.date;
     let hours = today.getHours();
     let mins = zeroPad(today.getMinutes());
 
-    let bashText2 = `${hours}:${mins}`;
+    await animation();
 
-    setTimeout(() => {
-        bash3.text = "> " + bashText3.substring(0, writingAt);
-
-        console.log(writingAt);
-
-        writingAt += 1;
-
-        if (writingAt > bashText3.length) {
-            console.log("done");
-            bash1.text = "";
-            bash2.text = "";
-            bash3.text = "";
-            writingAt = 0;
-            setTimeout(() => {
-                bash1.text = "> " + bashText1.substring(0, writingAt);
-        
-                writingAt += 1;
-        
-                if (writingAt > bashText1.length) {
-                    bash2.text = bashText2;
-                    writingAt = 0;
-                    return;
-                }
-            }, 300);
-            return;
-        }
-    }, 300);
+    bash2.text = `${hours}:${mins}`;
+    bash3.text = "> ";
 }

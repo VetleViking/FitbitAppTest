@@ -1,5 +1,5 @@
 <svg class="background">
-  <text id="bash1" x="50" y="50" />
-  <text id="bash2" x="50" y="100" />
-  <text id="bash3" x="50" y="150" />
+  <text id="bash1" />
+  <text id="bash2" />
+  <text id="bash3" />
 </svg>
