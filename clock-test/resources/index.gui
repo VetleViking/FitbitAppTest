@@ -5,10 +5,10 @@
   <text id="heartrate" />
   <image href="stepsicon.png" id="stepsicon" />
   <text id="steps" />
-  <image id="hour1" href="1.png" x="197" y="35" width="43" height="64" fill="#FFFFFF" class="foreground" />
-  <image id="hour2" href="3.png" x="247" y="35" width="43" height="64" fill="#FFFFFF" class="foreground" />
-  <image id="minute1" href="3.png" x="197" y="110" width="43" height="64" fill="#FFFFFF" class="foreground" />
-  <image id="minute2" href="7.png" x="247" y="110" width="43" height="64" fill="#FFFFFF" class="foreground" />
+  <image id="hour1" href="0.png" x="197" y="35" width="43" height="64" fill="#FFFFFF" class="foreground" />
+  <image id="hour2" href="0.png" x="247" y="35" width="43" height="64" fill="#FFFFFF" class="foreground" />
+  <image id="minute1" href="0.png" x="197" y="110" width="43" height="64" fill="#FFFFFF" class="foreground" />
+  <image id="minute2" href="0.png" x="247" y="110" width="43" height="64" fill="#FFFFFF" class="foreground" />
   <text id="date" />
   <image href="battery.png" id="batteryicon" />
   <text id="battery" />
