@@ -41,7 +41,7 @@ if (today.adjusted.steps) {
     steps.text = `${today.adjusted.steps}`;
   }, 10000);
 
-  steps.text = `${today.adjusted.steps}`;
+  steps.text = `${today.adjusted.steps || 0}`;
 }
 
 if (HeartRateSensor) {
@@ -50,6 +50,8 @@ if (HeartRateSensor) {
     heartrate.text = `${hrm.heartRate}`;
   });
   hrm.start();
+
+  heartrate.text = `${hrm.heartRate || 0}`;
 }
 
 function zeroPad(i) {
