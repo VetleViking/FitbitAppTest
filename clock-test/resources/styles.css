@@ -1,93 +1,36 @@
-.background {
-  viewport-fill: #1d1bb5;
-}
-
-/* #hour1 {
-  x: 60%;
-  y: 30%;
-  height: 50;
-  width: auto;
-  fill: #44c841;
-}
-
-#hour2 {
-  x: 80%;
-  y: 30%;
-  height: 50;
-  fill: #44c841;
-}
-
-#minute1 {
-  x: 60%;
-  y: 55%;
-  height: 50;
-  fill: #44c841;
-}
-
-#minute2 {
-  x: 80%;
-  y: 55%;
-  height: 50;
-  fill: #44c841;
-} */
-
 #heartrate {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  x: 19%;
-  y: 52%;
+  x: 80;
+  y: 155;
   fill: #44c841;
-}
-
-#heartrateicon {
-  x: 19%-23;
-  y: 52%-15;
-  height: 17;
-  width: 20;
-  z-index: 1;
 }
 
 #steps {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  x: 19%;
-  y: 82%;
+  x: 80;
+  y: 245;
   fill: #44c841;
-}
-
-#stepsicon {
-  x: 19%-23;
-  y: 82%-15;
-  height: 17;
-  width: 17;
-  z-index: 1;
 }
 
 #battery {
   font-size: 20;
   text-length: 32;
   font-family: System-Bold;
-  x: 68%;
-  y: 82%;
+  x: 224;
+  y: 245;
   fill: #44c841;
-}
-
-#batteryicon {
-  x: 68%-20;
-  y: 82%-15;
-  height: 17;
-  width: 13;
-  z-index: 1;
 }
 
 #date {
   font-size: 20;
   font-family: System-Bold;
   text-length: 32;
-  x: 3%;
-  y: 97%;
+  x: 9;
+  y: 291;
   fill: #44c841;
 }
 
@@ -96,7 +39,6 @@
   y: 50%-70;
   height: 140;
   width: 100;
-  z-index: -1;
 }
 
 #image1 {
@@ -104,6 +46,4 @@
   y: 0;
   height: 100%;
   width: 100%;
-  z-index: -2;
 }
-
