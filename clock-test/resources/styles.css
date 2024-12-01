@@ -1,49 +1,56 @@
 #heartrate {
-  font-size: 20;
-  text-length: 32;
-  font-family: System-Bold;
-  x: 80;
-  y: 155;
-  fill: #44c841;
+    font-size: 20;
+    text-length: 32;
+    font-family: System-Bold;
+    x: 80;
+    y: 155;
+    fill: #44c841;
 }
 
 #steps {
-  font-size: 20;
-  text-length: 32;
-  font-family: System-Bold;
-  x: 80;
-  y: 245;
-  fill: #44c841;
+    font-size: 20;
+    text-length: 32;
+    font-family: System-Bold;
+    x: 80;
+    y: 245;
+    fill: #44c841;
 }
 
 #battery {
-  font-size: 20;
-  text-length: 32;
-  font-family: System-Bold;
-  x: 224;
-  y: 245;
-  fill: #44c841;
+    font-size: 20;
+    text-length: 32;
+    font-family: System-Bold;
+    x: 224;
+    y: 245;
+    fill: #44c841;
+}
+
+#batterylevel {
+    x: 209;
+    y: 244;
+    fill: #44c841;
+    width: 7;
 }
 
 #date {
-  font-size: 20;
-  font-family: System-Bold;
-  text-length: 32;
-  x: 9;
-  y: 291;
-  fill: #44c841;
+    font-size: 20;
+    font-family: System-Bold;
+    text-length: 32;
+    x: 9;
+    y: 291;
+    fill: #44c841;
 }
 
 #image {
-  x: 50%-50;
-  y: 50%-70;
-  height: 140;
-  width: 100;
+    x: 50%-50;
+    y: 50%-70;
+    height: 140;
+    width: 100;
 }
 
 #image1 {
-  x: 0;
-  y: 0;
-  height: 100%;
-  width: 100%;
+    x: 0;
+    y: 0;
+    height: 100%;
+    width: 100%;
 }

@@ -1,15 +1,16 @@
 <svg class="background">
-  <image href="Background3.png" id="image1" />
+  <image href="Background4.png" id="image1" />
   <image href="black-back-0.png" id="image" />
-  <image id="heartrateicon" href="heartrateicon.png" x="57" y="140" width="20" height="17" />
+  <!-- <image id="heartrateicon" href="heartrateicon.png" x="57" y="140" width="20" height="17" /> -->
   <text id="heartrate" />
-  <image id="stepsicon" href="stepsicon.png" x="57" y="230" width="17" height="17" />
+  <!-- <image id="stepsicon" href="stepsicon.png" x="57" y="230" width="17" height="17" /> -->
   <text id="steps" />
   <image id="hour1" href="0.png" x="197" y="35" width="43" height="64" />
   <image id="hour2" href="0.png" x="247" y="35" width="43" height="64" />
   <image id="minute1" href="0.png" x="197" y="110" width="43" height="64" />
   <image id="minute2" href="0.png" x="247" y="110" width="43" height="64" />
   <text id="date" />
-  <image id="batteryicon" href="battery.png" x="207" y="230" width="13" height="17" />
+  <rect id="batterylevel" />
+  <!-- <image id="batteryicon" href="battery.png" x="207" y="230" width="13" height="17" /> -->
   <text id="battery" />
 </svg>
