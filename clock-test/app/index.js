@@ -104,6 +104,8 @@ clock.ontick = (evt) => {
 
 setInterval(intervalFunction, 2500);
 
+updateSteps();
+
 function intervalFunction() {
     if (display.on) {
         updateSteps();
